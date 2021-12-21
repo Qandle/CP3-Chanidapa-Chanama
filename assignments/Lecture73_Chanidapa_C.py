@@ -1,11 +1,15 @@
 menuList = []
+menuBar = {'menu1': 20,
+           'menu2': 30,
+           'menu3': 60}
 while True:
     menuName = input("Please Enter Menu :")
     if menuName.lower() == 'exit':
         break
     else:
-        menuPrice = input("Price :")
+        menuPrice = menuBar[menuName]
         menuList.append([menuName, menuPrice])
+print(menuList)
 
 
 def show_menu():
